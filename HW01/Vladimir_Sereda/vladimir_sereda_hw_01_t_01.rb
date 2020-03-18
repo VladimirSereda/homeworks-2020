@@ -5,17 +5,17 @@ puts 'Number of minutes'
 minutes = gets.to_i
 
 def angel(hours, minutes)
-# Cloc hand position
+  # Cloc hand position
   a = ((hours * 60) + minutes) * 0.5
-# Minute hand position
+  # Minute hand position
   b = minutes * 6
-# finding the angel between them
+  # finding the angel between them
   c = a - b
   if c.abs > 180
-    return 360 - c.abs
+    360 - c.abs
   else
-    return c.abs
+    c.abs
   end
 end
 
-puts "#{angel(hours,minutes)}"
+puts angel(hours, minutes).to_s
