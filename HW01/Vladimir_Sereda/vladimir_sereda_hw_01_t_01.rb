@@ -5,16 +5,13 @@ puts 'Number of minutes'
 minutes = gets.to_i
 
 def angel(hours, minutes)
-  # Cloc hand position
-  a = ((hours * 60) + minutes) * 0.5
-  # Minute hand position
-  b = minutes * 6
-  # finding the angel between them
-  c = a - b
-  if c.abs > 180
-    360 - c.abs
+  cloc_hand_position = ((hours * 60) + minutes) * 0.5
+  minute_hand_position = minutes * 6
+  angel_between_them = cloc_hand_position - minute_hand_position
+  if angel_between_them.abs > 180
+    360 - angel_between_them.abs
   else
-    c.abs
+    angel_between_them.abs
   end
 end
 
