@@ -2,7 +2,7 @@
 
 require_relative 'student'
 require_relative 'mentor'
-require_relative 'homework'
+require_relative 'homeworks'
 require_relative 'notifications'
 
 module App

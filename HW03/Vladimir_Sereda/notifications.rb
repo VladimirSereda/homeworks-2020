@@ -8,6 +8,6 @@ class Notification
   end
 
   def to_s
-    "#{student.name} #{student.surname}submit #{homework.homework_data}"
+    "#{student.name} #{student.surname} submit #{homework.homework_data}"
   end
 end

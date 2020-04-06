@@ -2,10 +2,12 @@
 
 class Mentor
   attr_reader :notifications
+  attr_accessor :mentors
   def initialize(name:, surname:)
     @name = name
     @surname = surname
     @notifications = []
+    
   end
 
   def subscribe_to(student)

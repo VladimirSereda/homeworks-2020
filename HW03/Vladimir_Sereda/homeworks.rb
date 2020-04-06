@@ -8,6 +8,6 @@ class Homework
   end
 
   def to_s
-    "#{homework_data} was sent"
+    homework_data.to_s
   end
 end

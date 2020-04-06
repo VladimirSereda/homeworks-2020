@@ -1,9 +1,9 @@
 # frozen_string_literal: true
 
 class Student
-  attr_reader :name, :surname
+  attr_reader :name, :surname, :homeworks
   attr_accessor :mentors
-  attr_reader :homeworks
+
   def initialize(name:, surname:)
     @name = name
     @surname = surname
@@ -12,18 +12,18 @@ class Student
   end
 
   def submit_homework!(homework_data)
-    works = Homework.new(homework_data)
-    homeworks << works
-    notificate_mentors(works)
+    homework = Homework.new(homework_data)
+    homeworks << homework
+    notificate_mentors(homework)
   end
 
   def show_homeworks
-    homeworks.empty? ? (puts 'No homeworks') : (puts homeworks)
+    puts homeworks.empty? ? 'No homeworks' : homeworks
   end
 
-  def notificate_mentors(works)
+  def notificate_mentors(homework)
     mentors.each do |mentor|
-      mentor.notifications << Notification.new(self, works)
+      mentor.notifications << Notification.new(self, homework)
     end
   end
 end
