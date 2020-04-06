@@ -7,7 +7,6 @@ class Mentor
     @name = name
     @surname = surname
     @notifications = []
-    
   end
 
   def subscribe_to(student)
