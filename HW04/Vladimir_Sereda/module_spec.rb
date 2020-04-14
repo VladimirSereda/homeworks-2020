@@ -1,6 +1,5 @@
-# frozen_string_literal: true
-
 require_relative 'module.rb'
+# rubocop:disable Metrics/BlockLength
 
 describe Array do
   describe '#for_each' do
